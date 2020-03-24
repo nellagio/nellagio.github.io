@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    text-align: center;
+    color: black;
+    text-shadow:rgb(56, 11, 6);
+    background-color: whitesmoke;
+    font-family: 'Alata', sans-serif;
+    margin: 2px;
+}
+
+#top_div {
+    border: black solid;
+    border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 15px;
+}
+
+#name_div {
+    border: black solid;
+    border-radius: 5px;
+}
+.img_nick {
+    border: black solid;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#history {
+    border: black solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 15px;
+}
+
+.img_climbers {
+    width: 100%;
+    border: black solid;
+    border-radius: 5px;
+}
+
+#github_div {
+    border: black solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 15px;
+}
+
+#job_div {
+    border: black solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 15px;
+}
+
+#hobby {
+    border: black solid;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 15px;
+}
+
+.img_hobby {
+    margin: 15px;
+    width: 100%;
+    border: black solid;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+@media (min-width: 1024px) {
+
+
+}
