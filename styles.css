@@ -12,17 +12,17 @@ a:link {
   }
   
   /* visited link */
-  a:visited {
+a:visited {
     color: rgb(4, 82, 4);
   }
   
   /* mouse over link */
-  a:hover {
+a:hover {
     color: rgba(0, 4, 255, 0.842);
   }
   
   /* selected link */
-  a:active {
+a:active {
     color: blue;
   }
 
@@ -51,7 +51,7 @@ body {
 .img_nick {
     border: black solid;
     border-radius: 5px;
-    width: 100%;
+    width: 250px;
 }
 
 #history {
@@ -107,6 +107,12 @@ body {
     }
     ul {
         list-style-type: none;
+    }
+
+    .img_nick {
+        border: black solid;
+        border-radius: 5px;
+        width: 100%;
     }
     #container {
         display: flex;
