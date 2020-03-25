@@ -51,7 +51,7 @@ body {
 .img_nick {
     border: black solid;
     border-radius: 5px;
-    width: 25   0px;
+    width: 250px;
 }
 
 #history {
@@ -120,8 +120,34 @@ body {
         justify-content: space-around;
     }
 
+    #github_image {
+        margin: 15px;
+    }
+
+    #link_image {
+        margin: 15px;
+    }
+
+    .social_links {
+        transition: transform .2s;
+        margin: 0 auto;
+      }
+      
+      .social_links:hover {
+        transform: scale(1.5);
+      }
+
+      .link_github {
+        transition: transform .2s;
+        margin: 0 auto;
+      }
+
+        .link_github:hover {
+            transform: scale(1.5);
+        }
+
 }
 @media (min-width: 1024px) {
 
-
+ 
 }
