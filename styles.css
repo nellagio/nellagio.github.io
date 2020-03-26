@@ -84,6 +84,7 @@ body {
     margin: 15px;
 }
 
+
 #hobby {
     border: black solid;
     border-radius: 5px;
@@ -94,6 +95,15 @@ body {
 
 .img_hobby {
     margin: 15px;
+    width: 100%;
+    border: black solid;
+    border-radius: 5px;
+}
+
+#footer {
+    height: 50px;
+    margin: 20px;
+    padding-top: 10px;
     width: 100%;
     border: black solid;
     border-radius: 5px;
@@ -120,6 +130,15 @@ body {
         justify-content: space-around;
     }
 
+    #job_div li {
+    transform-origin: 0 0;
+    transition: transform .25s, visibility .25s ease-in-out;
+    }
+
+    #job_div li:hover {
+        transform: scale(1.05);
+    }
+
     #github_image {
         margin: 15px;
     }
@@ -131,20 +150,21 @@ body {
     .social_links {
         transition: transform .2s;
         margin: 0 auto;
-      }
-      
-      .social_links:hover {
+    }
+    
+    .social_links:hover {
         transform: scale(1.5);
-      }
+    }
 
-      .link_github {
-        transition: transform .2s;
-        margin: 0 auto;
-      }
+    .link_github {
+    transform-origin: 0 0;
+    transition: transform .25s, visibility .25s ease-in;
+    }
+    }
 
-        .link_github:hover {
-            transform: scale(1.5);
-        }
+    .link_github:hover {
+        transform: scale(1.05);
+    }
 
 }
 @media (min-width: 1024px) {
