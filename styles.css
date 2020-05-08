@@ -54,8 +54,7 @@ a {
     border: black solid;	
     border-radius: 5px;	
 }	
-.img_nick {	
-    border: black solid;	
+.img_nick {		
     border-radius: 5px;	
     width: 250px;	
     margin-bottom: 15px	
@@ -72,7 +71,6 @@ a {
 }	
 .img_climbers {	
     width: 100%;	
-    border: black solid;	
     border-radius: 5px;	
 }	
 #github_div {	
@@ -101,8 +99,7 @@ a {
 }	
 .img_hobby {	
     margin: 15px;	
-    width: 100%;	
-    border: black solid;	
+    width: 100%;		
     border-radius: 5px;	
 }	
 #footer {	
@@ -210,4 +207,12 @@ a {
         padding-left: 300px;	
         padding-right: 300px;	
     }	
+    #job_div ul {	
+        color: black;	
+        transform-origin: 0 0;	
+        transition: transform .25s, visibility .25s ease-in-out;	
+        }	
+        #job_div ul:hover {	
+            transform: scale(1.2);	
+        }	
 }
