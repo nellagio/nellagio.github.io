@@ -1,205 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <style>
+        body{
+            background-color: rgba(128, 128, 128, 0.26)!important;
+        }
+        html {
+            box-sizing: border-box;
+        }
 
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <meta charset="UTF-8">
-  <meta name="description" content="Portfolio for Nick Gallo">
-  <meta name="keywords"
-    content="Nick Gallo, Nick, Gallo, Portland, Oregon, Portland, jr dev, Developer, software, engineering, photography, mountaineering, nickgallo.dev, www.nickgallo.dev">
-  <meta name="author" content="Nick Gallo">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Portfolio of Nick Gallo </title>
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        #main_div {
+            margin-top: 75px;
+            border: 1px solid black;
+            border-radius: 15px;
+            text-align: center;
+            color: black;
+            background-color: whitesmoke;
+            font-family: 'Alata', sans-serif;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin: 10px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* visited link */
+        #github_div a:visited {
+            color: rgb(0, 0, 0);
+        }
+
+        /* mouse over link */
+        #github_div a:hover {
+            color: rgba(0, 4, 255, 0.842);
+        }
+
+        /* selected link */
+        #github_div a:active {
+            color: red;
+        }
+
+        #github_image {
+            margin: 15px;
+        }
+
+        #link_image {
+            margin: 15px;
+        }
+
+        #top_div {
+            border: black solid;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #name_div {
+            border: black solid;
+            border-radius: 5px;
+        }
+
+        .img_nick {
+            border-radius: 5px;
+            width: 250px;
+            margin-bottom: 15px
+        }
+
+        #footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border: black solid;
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        @media (min-width: 768px) {
+            #main_div {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            .img_nick {
+                border: black solid;
+                border-radius: 5px;
+                width: 350px;
+            }
+
+            #job_div a:visited {
+                color: rgb(0, 0, 0);
+            }
+
+            #job_div a:link {
+                text-decoration: none;
+            }
+
+            #job_div a:visited {
+                color: rgb(0, 0, 0);
+            }
+
+
+            #job_div a:hover {
+                color: rgba(0, 4, 255, 0.842);
+            }
+
+
+            #job_div a:active {
+                color: red;
+            }
+
+
+            #job_div ul {
+                color: black;
+                transform-origin: 0 0;
+                transition: transform .25s, visibility .25s ease-in-out;
+            }
+
+            #job_div ul:hover {
+                transform: scale(1.05);
+            }
+
+            #github_image {
+                margin: 15px;
+            }
+
+            #github_div a:hover {
+                color: rgba(0, 4, 255, 0.842);
+            }
+
+            .link_github {
+                transform-origin: 0 0;
+                transition: transform .25s, visibility .25s ease-in;
+            }
+
+            .link_github:hover {
+                transform: scale(1.05);
+            }
+
+            #link_image {
+                margin: 15px;
+            }
+
+            .social_links {
+                transition: transform .2s;
+                margin: 0 auto;
+            }
+
+            .social_links:hover {
+                transform: scale(1.5);
+            }
+        }
+
+        @media (min-width: 1050px) {
+            #main_div {
+                padding-left: 110px;
+                padding-right: 110px;
+            }
+
+            #container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .img_nick {
+                border: black solid;
+                border-radius: 5px;
+                width: 50%;
+            }
+
+            #history {
+                padding-left: 25px;
+                padding-right: 25px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+
+            #absolute_body {
+                padding-left: 300px;
+                padding-right: 300px;
+            }
+
+            #job_div ul {
+                color: black;
+                transform-origin: 0 0;
+                transition: transform .25s, visibility .25s ease-in-out;
+            }
+
+            #job_div ul:hover {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio for Nick Gallo">
+    <meta name="keywords"
+        content="Nick Gallo, Nick, Gallo, Portland, Oregon, Portland, jr dev, Developer, software, engineering, photography, mountaineering, nickgallo.dev, www.nickgallo.dev">
+    <meta name="author" content="Nick Gallo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio of Nick Gallo </title>
 </head>
 
 <body>
-  <div id="absolute_body">
-    <!--header-->
-    <div id="container">
-      <div id="top_div">
-        <div class="name_div">
-          <h1>Nick Gallo</h1>
-          <h3>Full-stack web and app developer, mountaineer and photographer </h3>
-          <img id="email_image" src="images/email_button.jpg" width="50"
-              height="30">
-          </a>
-          <h4> nickgallo41@gmail.com
-          </h4>
 
-          <a href="https://github.com/nellagio">
-            <img class="social_links" id="github_image" alt="GitHub Link" src="images/github.png" width="60"
-              height="60">
-          </a>
-          <a href="https://www.linkedin.com/in/nick-gallo-69627119a/">
-            <img class="social_links" id="link_image" alt="LinkedIn link" src="images/link.png" width="60"
-              height="60">
-          </a>
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="contact.html">Resume</a>
+        <a class="navbar-brand" href="news.html">News</a>
+        <a class="navbar-brand" href="about.html">About Me</a>
+    </nav>
+
+    <div id="main_div">
+        <div class="name_div">
+            <h1>Nick Gallo</h1>
+            <h3>Full-stack web development</h3>
+            <img id="email_image" src="images/email_button.jpg" width="50" height="30">
+            </a>
+            <h4> nickgallo41@gmail.com
+            </h4>
+            <a href="https://github.com/nellagio">
+                <img class="social_links" id="github_image" alt="GitHub Link" src="images/github.png" width="60"
+                    height="60">
+            </a>
+            <a href="https://www.linkedin.com/in/nick-gallo-69627119a/">
+                <img class="social_links" id="link_image" alt="LinkedIn link" src="images/link.png" width="60"
+                    height="60">
+            </a>
         </div>
         <img class="img_nick" src="images/me.jpg" alt="A photo Nick Gallo" />
-      </div>
-
-      <!--about me-->
-      <div id="history">
-        <h2>Background</h2>
-        <h4> I grew up on the east coast but have lived in Portland, Oregon for the last 5+ years. I have gained
-          valuable
-          skills through the years from hospitality, warehouse management, and sales in the the outdoor and automotive
-          accessory industry.
-          My most recent skill set in web and app development has come through
-          personal and coding boot camp projects.
-
-          Recently, I began my trek into the professional software development industry by attending a few boot camps
-          located here in Portland, Oregon. Some of this training included HTML, CSS, JavaScript, Python, Django, Vue as
-          well as other supporting frameworks.
-        </h4>
-        <img class="img_climbers" src="images/climbersummit.JPG" alt="Climbers on the summit of Mount Hood" />
-      </div>
-
-      <!--list of projects you have created with active links to their GitHub pages sites or GitHub repositories.-->
-
-      <div id="github_div">
-        <h2>Github Project Repositories:</h2>
-        <a href="https://github.com/nellagio/wiki-project.git">
-          <h4 class="link_github"> A replication of Wikipedia done in
-            class with a partner using CCS and HTML.</h4>
-        </a>
-
-        <a href="https://github.com/nellagio/pigDice">
-          <h4 class="link_github"> My partner's and I rendition of the classic
-            game Pig Dice. This was built using HTML, CSS and Javascript</h4>
-        </a>
-
-        <a href="https://github.com/nellagio/vacation-project.git">
-          <h4 class="link_github">For an assignment in class, I
-            helped recreate an Italian Resort's website using HTML and CSS.</h4>
-        </a>
-      </div>
-    </div>
-    <!--current job-->
-
-    <div id="job_div">
-
-      <!--CURRENT JOB RESUME-->
-      <h1>Professional Experience:</h1>
-      <hr>
-      <a href="https://www.rackattack.com/">
-        <h2>Rack Attack Portland SE
-      </a> - <a
-        href="https://www.google.com/maps/place/Rack+Attack+Portland-East/@45.5184159,-122.6604419,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a0a6d06dba6d:0x8c42b81af9f3f273!8m2!3d45.5184159!4d-122.6582532">Portland,
-        Oregon</a> - May 2019 - Present</h2>
-      <h3>Sales and Installation Specialist</h3>
-      <ul>
-        <li>2019 gross sales totaling $250,000</li>
-        <li>7th in total sales and installation volume across the entire multi international organization</li>
-        <li>100+ custom installations requiring high precision drilling and re-sealing of OEM body
-          panels - the company's bread and butter</li>
-        <li>Excellent customer satisfaction rating on online feedback process</li>
-      </ul>
-      <hr>
-      <!--YAKIMA RESUME-->
-      <a href="https://www.yakima.com/">
-        <h2>Yakima Products
-      </a> - <a
-        href="https://www.google.com/maps/place/Yakima+Products,+Inc./@45.4179671,-122.7221861,17z/data=!3m1!4b1!4m5!3m4!1s0x549573383636445b:0xbd2c0b7dc1fe25dd!8m2!3d45.4179671!4d-122.7199974">Lake
-        Oswego, Oregon</a> - April 2018 – April 2019</h2>
-      <h3>Service Representative</h3>
-      <ul>
-        <li>Provide warranty and technical support</li>
-        <li>Process Product Integrity Claims, perform order entry, data capturing, process returns and handle general
-          inquiries of past, current and future products on the market</li>
-        <li>Assisted supply chain department with data to ensure we met customer and dealer's needs</li>
-        <li>Provided feedback to design engineers</li>
-      </ul>
-      <hr>
-      <!--FIRST RA RESUME-->
-      <a href="https://www.rackattack.com/">
-        <h2>Rack Attack Portland SE
-      </a> - <a
-        href="https://www.google.com/maps/place/Rack+Attack+Portland-East/@45.5184159,-122.6604419,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a0a6d06dba6d:0x8c42b81af9f3f273!8m2!3d45.5184159!4d-122.6582532">Portland,
-        Oregon</a> - March 2017 – March 2018</h2>
-      <h3>Sales and Installation Specialist</h3>
-      <ul>
-        <li>2017 product and installation sales of more than $275,000</li>
-        <li>2018 product and installation sales of more than $70,000</li>
-      </ul>
-      <hr>
-      <!--LAM RES. RESUME-->
-      <a href="https://www.lamresearch.com/">
-        <h2>Lam Research Warehouse
-      </a> - <a
-        href="https://www.google.com/search?sxsrf=ALeKk01Wa5X2SD1wp3U39IBfX_qt_B_zcg:1585182193866&q=lam%20research&sa=X&ved=2ahUKEwiN88bs77boAhVVtZ4KHUAUAvMQvS4wCHoECBUQGg&biw=1536&bih=792&dpr=1.25&npsic=0&rflfq=1&rlha=0&rllag=45494469,-122667734,17242&tbm=lcl&rldimm=11755642772432147026&lqi=CgxsYW0gcmVzZWFyY2giA4gBAVocCgxsYW0gcmVzZWFyY2giDGxhbSByZXNlYXJjaA&rldoc=1&tbs=lrf:!1m5!1u8!2m3!8m2!1u32200!3e1!1m4!1u17!2m2!17m1!1e2!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m4!1e17!4m2!17m1!1e2!2m1!1e16!3sIAE,lf:1,lf_ui:4&rlst=f#rlfi=hd:;si:11755642772432147026,l,CgxsYW0gcmVzZWFyY2giA4gBAVocCgxsYW0gcmVzZWFyY2giDGxhbSByZXNlYXJjaA;mv:[[45.636887,-122.5202136],[45.352051599999996,-122.90596979999998]];tbs:lrf:!1m4!1u17!2m2!17m1!1e2!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m1!1e16!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:4">Sherwood,
-        Oregon</a> - June 2015 - September 2015</h2>
-      <h3>Material Handler - Summer seasonal position</h3>
-      <ul>
-        <li>Security clearance required due to U.S. Customs bypass</li>
-        <li>Manage international shipping of electromagnetically sensitive equipment</li>
-        <li>Selecting, receiving and auditing material kits requiring further assembly for shipment to assembly
-          facilities</li>
-      </ul>
-      <hr>
-      <!--LOWES RESUME-->
-      <a href="https://www.lowes.com/">
-        <h2>Lowe's Home Improvement RDC
-      </a> - <a
-        href="https://www.google.com/maps/place/Lowe's+Distribution+Center/@41.0856521,-83.6315175,15z/data=!4m2!3m1!1s0x0:0xd561af5d1f371ab2?sa=X&ved=2ahUKEwi4la6f8LboAhWNtp4KHWbpBycQ_BIwCnoECBEQCA">Findlay,
-        Ohio</a> - January 2012 – June 2014</h2>
-      <h3>Assistant Supervisor – Performance Instructor</h3>
-      <ul>
-        <li> Powered equipment and performance instructor</li>
-        <li>Appliances and “Building” Department</li>
-        <li>Establish training and retraining schedules and see them through safely</li>
-        <li>Responsible for department paperwork and keeping digital data base systems current</li>
-        <li>Managed department Product Loss Prevention program</li>
-        <li>Assisted in managing day to day operations</li>
-        <li>Managed department operations when direct supervisor was out</li>
-      </ul>
-      <hr>
-      <h1>Educational Background:</h1>
-      <hr>
-      <a href="https://pdxcodeguild.com/">
-        <h2>PDX Code Guild
-      </a> - <a
-        href="https://www.google.com/maps/place/PDX+Code+Guild/@45.5024239,-122.6771354,17z/data=!3m1!4b1!4m5!3m4!1s0x54950a6bbcb1c7a9:0x8d823437e0c4bde2!8m2!3d45.5024239!4d-122.6749467">Portland,
-        Oregon</a> - 2020 - present</h2>
-      <ul>
-        <li>Languages and Frameworks learned: Git, Python, HTML, CSS, Django, Vue</li>
-      </ul>
-      <hr>
-      <a href="https://www.epicodus.com/">
-        <h2>Epicodus: Introduction to Programming
-      </a> - <a
-        href="https://www.google.com/maps/place/Epicodus/@45.5206223,-122.6773984,15z/data=!4m2!3m1!1s0x0:0x1a5a314da13581e5?sa=X&ved=2ahUKEwiL35qG87boAhUQop4KHYmBBPwQ_BIwDXoECAwQCA">Portland,
-        Oregon</a> - 2020</h2>
-      <ul>
-        <li> Languages and Frameworks learned: Git, HTML, CSS, Bootstrap, Intermediate Javascript </li>
-      </ul>
-    </div>
-
-    <!--interest+hobbies+skills-->
-    <div id="hobby">
-      <h2>Outside of the office:</h2>
-      <p class="p_1_hobby"> I like to live an active lifestyle. While out in the backcountry I enjoy skiing, topping out
-        on our
-        volcanoes
-        around the Pacific Northwest and cycling.</p>
-      <p class="p_2_hobby">Here are just a few of my many photos:</p>
-      <img class="img_hobby" src="images/burntlake.jpg" alt="A photo of Mount Hood from Burnt Lake">
-
-      <img class="img_hobby" src="images/markdownclimb.JPG"
-        alt="A photo of my friend Mark descending down the Pearly Gates, Mount Hood.">
-
-      <img class="img_hobby" src="images/ruby.jpg" alt="A photo taken at Ruby Beach, Washington.">
-
-      <img class="img_hobby" src="images/SUPERBLOODMOON.jpeg"
-        alt="Super Blood Moon taken from the west hills of Portland, Oregon. in 2017.">
     </div>
 
     <footer id="footer">
-      <span class="footer_div">&copy; 2020 Nick Gallo</span>
+        <p>&copy; Nick Gallo 2020</p>
     </footer>
-  </div>
 </body>
-
 
 </html>
